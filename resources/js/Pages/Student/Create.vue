@@ -78,7 +78,6 @@ const login_details = ref(false);
                                 id="email"
                                 type="email"
                                 v-model="form.email"
-                                required
                                 autofocus
                                 autocomplete="email"
                             />
@@ -94,7 +93,6 @@ const login_details = ref(false);
                                 id="college_name"
                                 type="text"
                                 v-model="form.college_name"
-                                required
                                 autofocus
                                 autocomplete="college_name"
                             />
@@ -111,7 +109,6 @@ const login_details = ref(false);
                             id="address"
                             type="text"
                             v-model="form.address"
-                            required
                             autofocus
                             autocomplete="address"
                         />
@@ -151,7 +148,6 @@ const login_details = ref(false);
                             id="username"
                             type="text"
                             v-model="form.username"
-                            required
                             autofocus
                             autocomplete="username"
                         />
@@ -167,7 +163,6 @@ const login_details = ref(false);
                             id="password"
                             type="password"
                             v-model="form.password"
-                            required
                             autofocus
                             autocomplete="password"
                         />

@@ -76,9 +76,9 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Student $student)
     {
-        //
+        return Inertia::render('Student/Edit', compact('student'));
     }
 
     /**
@@ -88,9 +88,25 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Student $student)
     {
-        //
+        $request->validate([
+            'name' => 'required|min:3',
+            'phone' => 'required'
+        ]);
+
+        $student->update([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'college_name' => $request->college_name,
+            'address' => $request->address,
+            'username' => $request->username,
+            'password' => $request->password,
+            'status' => $request->status,
+        ]);
+
+        return redirect()->route('student.index')->with('message', 'Student Updated Successfully!!');
     }
 
     /**
@@ -99,8 +115,10 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Student $student)
     {
-        //
+        $student->delete();
+
+        return redirect()->back()->with('message', 'Student Deleted Successfully!!');
     }
 }

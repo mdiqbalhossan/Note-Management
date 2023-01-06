@@ -105,6 +105,38 @@ const destroy = (student_id) => {
                                     class="bg-indigo-600 hover:bg-indigo-800 px-1 py-1 rounded-md text-white font-semibold tracking-wide cursor-pointer"
                                 >
                                     <Icon
+                                        path="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                                    />
+                                </Link>
+
+                                <Link
+                                    :href="route('student.edit', student.id)"
+                                    as="button"
+                                    class="bg-teal-600 hover:bg-teal-800 px-1 py-1 mx-2 rounded-md text-white font-semibold tracking-wide cursor-pointer"
+                                >
+                                    <svg
+                                        class="w-6 h-6"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M10 12a2 2 0 100-4 2 2 0 000 4z"
+                                        ></path>
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
+                                            clip-rule="evenodd"
+                                        ></path>
+                                    </svg>
+                                </Link>
+
+                                <Link
+                                    :href="route('student.edit', student.id)"
+                                    as="button"
+                                    class="bg-indigo-600 hover:bg-indigo-800 px-1 py-1 rounded-md text-white font-semibold tracking-wide cursor-pointer"
+                                >
+                                    <Icon
                                         path="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
                                     />
                                 </Link>
